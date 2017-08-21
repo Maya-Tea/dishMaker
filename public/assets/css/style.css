@@ -9,7 +9,7 @@ body{
   grid-auto-rows: minmax(100px, auto);
   background-image: url("/assets/images/foodPyramid.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 30% top;
 text-align: center;
 margin:50px;
 margin-top: 0px;
@@ -43,7 +43,8 @@ margin-top: 0px;
 header {
   grid-column: 1 / 5;
   grid-row: 1;
-  text-align: center;
+  text-align: 30%;
+  padding-left: 100px;
   background: orange; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(orange, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(orange, white); /* For Opera 11.1 to 12.0 */
