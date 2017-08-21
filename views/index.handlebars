@@ -1,0 +1,69 @@
+
+
+
+
+<div class="wrapper">
+
+  <div id="pantry">
+
+    <h2>Add a food</h2>
+    <form class="create-update-form" action="/" method="POST">
+
+      <div class="form-group">
+        <label for="ca">food Name:</label>
+        <input type="text" id="ca" name="name">
+      </div>
+
+      <button type="submit">Add food to the pantry</button>
+    </form>
+<h2>Pantry</h2>
+<ul>
+  {{#each foods}}
+    {{#unless this.added}}
+      <li>
+        {{> foods/delete-food}}
+
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="added" value="true">
+          <button type="submit" class="put-btn">add &rarr;</button>
+        </form>
+
+
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+<div id="usedFoods">
+<h2>Ingredients to Use</h2>
+
+<ul>
+  {{#each foods}}
+    {{#if this.added}}
+      <li>
+
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="added" value="false">
+          <button type="submit" class="put-btn">&larr; pantry</button>
+        </form>
+
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="added" value="false">
+
+        </form>
+
+        {{> foods/delete-food}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+<div id="addFood">
+
+</div>
+</div>

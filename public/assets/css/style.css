@@ -1,0 +1,94 @@
+body{
+  margin:0;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  grid-auto-rows: minmax(100px, auto);
+  background-image: url("/assets/images/foodPyramid.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+text-align: center;
+margin:50px;
+margin-top: 0px;
+
+}
+#usedFoods{
+  grid-column: 3 / 5;
+  grid-row: 1/4;
+  text-align: center;
+  justify-self: stretch;
+}
+#pantry{
+  text-align: center;
+  grid-column: 1 / 2;
+  grid-row: 1/4;
+}
+#addFood{
+  grid-column: 1/5;
+  grid-row: 5;
+}
+#delete-btn{
+  color:red;
+  font-size: .5em;
+  align-self: flex-start;
+
+}
+.put-btn{
+  font-size: 1em;
+  align-self: flex-end;
+}
+header {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  text-align: center;
+  background: orange; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(orange, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(orange, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(orange, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(orange, white); /* Standard syntax (must be last) */
+  width:100%;
+  padding-top:60px;
+  padding-bottom:80px;
+
+}
+
+h1{
+  margin:0px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size:2.7em;
+  color:white;
+  text-shadow: 1px 1px grey;
+}
+
+
+li {
+  display:flex;
+  justify-content: space-between;
+  background-color:rgba(	238,203,173, .4);
+  padding: 5px;
+  margin: 5px;
+  border: 3px dashed grey;
+  font-size: 1.2em;
+}
+ul{
+  padding-left: 0px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background-color:lightgreen;
+
+
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
